@@ -2,5 +2,6 @@ target/
 *.iml
 *.ipr
 *.iws
-idea/
+.ideaDataSources/
 mysql-data/
+tomcat.8082/
