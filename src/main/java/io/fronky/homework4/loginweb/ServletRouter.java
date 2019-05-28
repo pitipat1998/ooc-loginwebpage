@@ -45,7 +45,7 @@ public class ServletRouter {
                 Routable routable = (Routable) method.invoke(null, null);
                 String name = routable.getClass().getSimpleName();
                 Tomcat.addServlet(ctx, name, (HttpServlet) routable);
-                ctx.addServletMapping(routable.getMapping(), name);
+                ctx.addServletMappingDecoded(routable.getMapping(), name);
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             } catch (NoSuchMethodException e){
