@@ -5,16 +5,18 @@
     <head>
         <script>
             function del(username){
-                var request = new XMLHttpRequest();
-                request.open("DELETE", "/users?username=" + username);
-                request.send();
-                location.reload(true);
+                if(window.confirm("want to delete " + username + " ?")){
+                    var request = new XMLHttpRequest();
+                    request.open("DELETE", "/users?username=" + username);
+                    request.send();
+                    location.reload(true);
+                }
             }
         </script>
     </head>
     <body>
         <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href="/user">User</a></li>
             <li><a href="/logout">Logout</a></li>
         </ul>
         <h1>Users</h1>
@@ -31,13 +33,15 @@
                     <td>${user.firstName}</td>
                     <td>${user.lastName}</td>
                     <td>
-                        <button onclick="del('${user.username}')" style="background:none; border:none; cursor:pointer;">
-                            delete
-                        </button>
+                        <c:if test="${username != user.username}">
+                            <button onclick="del('${user.username}')" style="background:none; border:none; cursor:pointer;">
+                                delete
+                            </button>
+                        </c:if>
                     </td>
                 </tr>
             </c:forEach>
         </table>
-
+        <a href="/register">Add User</a>
     </body>
 </html>

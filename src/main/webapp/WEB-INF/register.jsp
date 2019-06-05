@@ -3,7 +3,8 @@
 
 <html>
     <ul>
-        <li><a href="/login">Login</a></li>
+        <li><a href="/user">User</a></li>
+        <li><a href="/users">Users</a></li>
     </ul>
     <body>
         <h1>Register</h1>

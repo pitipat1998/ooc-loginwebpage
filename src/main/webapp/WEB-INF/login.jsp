@@ -12,8 +12,8 @@
             <br><br>
             <input type="submit" value="Submit">
         </form>
-        <div>
-            <a href="/register">Register</a>
-        </div>
+        <%--<div>--%>
+            <%--<a href="/register">Register</a>--%>
+        <%--</div>--%>
     </body>
 </html>

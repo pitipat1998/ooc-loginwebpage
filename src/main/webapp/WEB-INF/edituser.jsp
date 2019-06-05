@@ -3,7 +3,7 @@
 
 <html>
     <ul>
-        <li><a href="/">Home</a></li>
+        <li><a href="/user">User</a></li>
         <li><a href="/users">Users</a></li>
     </ul>
     <body>

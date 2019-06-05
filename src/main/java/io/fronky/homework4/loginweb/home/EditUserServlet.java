@@ -73,7 +73,7 @@ public class EditUserServlet extends HttpServlet implements Routable {
                 String lastName = request.getParameter("lastName");
                 if (!StringUtils.isBlank(password) && !StringUtils.isBlank(firstName) && !StringUtils.isBlank(lastName) ) {
                     userService.update(username, password, firstName, lastName);
-                    response.sendRedirect("/");
+                    response.sendRedirect("/user");
                 } else {
                     String error = "Some fields are missing.";
                     request.setAttribute("error", error);

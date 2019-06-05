@@ -7,7 +7,7 @@
             <li><a href="/users">Users</a> </li>
             <li><a href="/logout">Logout</a></li>
         </ul>
-        <h1>Home</h1>
+        <h1>User</h1>
         <h2>Username:</h2>
         <h3>${user.username}</h3>
         <h2>First Name:</h2>
